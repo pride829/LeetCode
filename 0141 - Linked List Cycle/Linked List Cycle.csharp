@@ -1,0 +1,16 @@
+public class Solution {
+    public bool HasCycle(ListNode head) {
+        if(head == null){
+            return false;
+        }
+        if(head.val == (int)(Math.Pow(10,5) + 1)){
+            return true;
+        }
+        if(head.next == null){
+            return false;
+        }
+        head.val = (int)(Math.Pow(10,5) + 1);
+        return HasCycle(head.next);
+        
+    }
+}
